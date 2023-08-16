@@ -1,12 +1,9 @@
-do{
-    var numDigitado = prompt("Digite um número");
-} while(isNaN(numDigitado));
-
-console.log(isNumPrimo(numDigitado));
-
+console.log(isNumPrimo(4));
 function isNumPrimo(num) {
-    for (let index = num - 1; index > 0; index--) {
-        if(num % index == 0 && index != 1){
+    if(num % 2 === 0)
+        return 0;
+    for (let index = 3; index < num; index+=2) {
+        if(num % index == 0){
             return 0;
         }
     }
