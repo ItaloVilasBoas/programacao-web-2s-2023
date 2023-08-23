@@ -8,6 +8,17 @@ const matrizB = [
     [-1, 4]
 ];
 
+console.log("Matriz A:");
+matrizA.forEach(element => {
+    console.log(element);
+});
+
+console.log("Matriz B:");
+matrizB.forEach(element => {
+    console.log(element);
+});
+
+console.log("Matriz A x B:");
 if(matrizA[0].length != matrizB.length){
     console.log("Não é possível calcular")
 } else{
