@@ -18,7 +18,7 @@ app.post('/dados', (req, res)=>{
     var nome = req.body.name;
     var endereco = req.body.endereco;
     var telefone = req.body.telefone;
-    var dataAgendamento = req.body.dataAgendamento;
+    var dataAgendamento = req.body.data;
 
     res.render('dados', {nome, endereco, telefone, dataAgendamento});
 })
