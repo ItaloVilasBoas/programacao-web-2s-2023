@@ -19,15 +19,20 @@ app.post('/dados', (req, res)=>{
     var endereco = req.body.endereco;
     var telefone = req.body.telefone;
     var dataAgendamento = req.body.data;
-    var mensagemAlerta = "";
-    mensagemAlerta += nome == "" ? "nome\n" : "";
-    mensagemAlerta += endereco == "" ? "endereco\n" : "";
-    mensagemAlerta += telefone == "" ? "telefone\n" : "";
-    mensagemAlerta += dataAgendamento == "" ? "data de agendamento\n" : "";
-    var alertaAtivo = mensagemAlerta != "";
+    var camposNaoPreenchidos = new Array();
 
+    if(nome == "")
+        camposNaoPreenchidos.push("nome");
+    if(endereco == "")
+        camposNaoPreenchidos.push("endereco");
+    if(telefone == "")
+        camposNaoPreenchidos.push("telefone");
+    if(dataAgendamento == "")
+        camposNaoPreenchidos.push("data de agendamento");
 
-
+    var mensagemAlerta = camposNaoPreenchidos.join(", ").replace(/, ([^,]*)$/, ' e $1');
+    var alertaAtivo = (camposNaoPreenchidos.length > 0);
+    
     res.render('dados', {nome, endereco, telefone, dataAgendamento, mensagemAlerta, alertaAtivo});
 })
 
