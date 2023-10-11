@@ -56,7 +56,7 @@ app.post('/dados', (req, res)=>{
     var mensagemAlerta = camposNaoPreenchidos.join(", ").replace(/, ([^,]*)$/, ' e $1');
     var alertaAtivo = (camposNaoPreenchidos.length > 0);
     
-    res.render('dados', {mensagemAlerta, alertaAtivo});
+    res.render('dados', {dadosPessoais, dadosConsulta, mensagemAlerta, alertaAtivo});
 })
 
 app.listen(PORT, ()=>{

@@ -16,6 +16,53 @@
             <div class="alert alert-success" role="alert" >
                 <p>Sua consulta foi agendadda com sucesso!</p>
             </div>
+            <div class="container">
+                <div class="col-12">
+                    <h1>Formulário de consulta (Paciente: {{dadosPessoais.nome}})</h1>
+                </div>
+                <div class="col-6">
+                    <h3>Dados do Paciente</h3>
+                    <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Nome: {{dadosPessoais.nome}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="cpf" class="form-label">CPF: {{dadosPessoais.cpf}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="bday" class="form-label">Data de Nascimento: {{dadosPessoais.dataNascimento}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="address" class="form-label">Endereço: {{dadosPessoais.endereco}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="phone" class="form-label">Telefone: {{dadosPessoais.telefone}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">E-mail: {{dadosPessoais.email}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="cep" class="form-label">CEP: {{dadosPessoais.cep}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="uf" class="form-label">Estado: {{dadosPessoais.uf}}</label>
+                    </div>
+                </div>
+                <div class="col-6"></div>
+                    <h3>Dados da Consulta</h3>
+                    <div class="mb-3 mt-3">
+                        <label for="date" class="form-label">Data do Agendamento: {{dadosConsulta.dataConsulta}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="especialidade" class="form-label">Nome: {{dadosConsulta.especialidade}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="alergia" class="form-label">Alergias reportadas: {{dadosConsulta.alergias}}</label>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="infoAdd" class="form-label">Inf. Adicionais: {{dadosConsulta.infoAdicionais}}</label>
+                    </div>
+                </div>
+            </div>
             {{/alertaAtivo}}
         </div>
     </body>
